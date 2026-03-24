@@ -21,3 +21,13 @@ service.AddEquipment(laptop);
 service.AddEquipment(camera);
 
 service.RentEquipment(student.Id, laptop.Id);
+
+try
+{
+    service.RentEquipment(student.Id, camera.Id);
+    service.RentEquipment(student.Id, new Equipment("Extra").Id);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
