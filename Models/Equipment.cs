@@ -1,12 +1,12 @@
 ﻿namespace APBD_TASK2.Models;
 
-public class Equipment
+public abstract class Equipment
 {
     private static int _id = 1;
 
-    public string Id { get; }
-    public string Name { get; set; }
-    public bool IsAvailable { get; set; }
+    private string Id { get; }
+    private string Name { get; set; }
+    private bool IsAvailable { get; set; }
 
     public Equipment(string name)
     {

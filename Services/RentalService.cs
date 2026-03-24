@@ -1,6 +1,8 @@
 ﻿using APBD_TASK2.Interfaces;
 using APBD_TASK2.Models;
 
+using APBD_TASK2.Models;
+
 namespace APBD_TASK2.Services;
 
 public class RentalService : IRentalService
