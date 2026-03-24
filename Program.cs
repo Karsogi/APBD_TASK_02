@@ -20,3 +20,4 @@ var camera = new Equipment("Camera");
 service.AddEquipment(laptop);
 service.AddEquipment(camera);
 
+service.RentEquipment(student.Id, laptop.Id);
