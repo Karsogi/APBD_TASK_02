@@ -37,3 +37,7 @@ foreach (var e in service.GetAllEquipment())
 {
     Console.WriteLine($"{e.Name} available: {e.IsAvailable}");
 }
+service.RentEquipment(employee.Id, camera.Id);
+var rental = service.GetAllRentals().First(r => r.Equipment.Id == camera.Id);
+rental.DueDate = DateTime.Now.AddDays(-5);
+service.ReturnEquipment(camera.Id);

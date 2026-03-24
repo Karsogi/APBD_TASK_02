@@ -52,6 +52,7 @@ public class RentalService : IRentalService
 
         eq.IsAvailable = false;
     }
+    public List<Rental> GetAllRentals() => rentals;
 
     public void ReturnEquipment(string equipmentId)
     {
