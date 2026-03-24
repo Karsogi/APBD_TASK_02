@@ -2,8 +2,8 @@
 
 public class Camera : Equipment
 {
-    private int pixels { get; set; }
-    private bool working { get; set; }
+    public int pixels { get; set; }
+    public bool working { get; set; }
 
     public Camera(int pixels, bool working)
         : base("Camera")

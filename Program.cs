@@ -3,6 +3,7 @@
 using APBD_TASK2.Database;
 using APBD_TASK2.Enum;
 using APBD_TASK2.Models;
+using APBD_TASK2.Models.EquipmentModel;
 using APBD_TASK2.Services;
 
 var db = Singleton.Instance;
@@ -14,8 +15,8 @@ var employee = new User("Anna", "Nowak", UserType.Employee);
 service.AddUser(student);
 service.AddUser(employee);
 
-var laptop = new Equipment("Laptop");
-var camera = new Equipment("Camera");
+var laptop = new Laptop("ASUS");
+var camera = new Camera(4800,true);
 
 service.AddEquipment(laptop);
 service.AddEquipment(camera);
@@ -25,7 +26,7 @@ service.RentEquipment(student.Id, laptop.Id);
 try
 {
     service.RentEquipment(student.Id, camera.Id);
-    service.RentEquipment(student.Id, new Equipment("Extra").Id);
+    service.RentEquipment(student.Id, laptop.Id);
 }
 catch (Exception e)
 {

@@ -2,11 +2,11 @@
 
 public abstract class Equipment
 {
-    private static int _id = 1;
+    public static int _id = 1;
 
-    private string Id { get; }
-    private string Name { get; set; }
-    private bool IsAvailable { get; set; }
+    public string Id { get; }
+    public string Name { get; set; }
+    public bool IsAvailable { get; set; }
 
     public Equipment(string name)
     {
