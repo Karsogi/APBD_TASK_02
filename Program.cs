@@ -31,3 +31,9 @@ catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
+
+service.ReturnEquipment(laptop.Id);
+foreach (var e in service.GetAllEquipment())
+{
+    Console.WriteLine($"{e.Name} available: {e.IsAvailable}");
+}
